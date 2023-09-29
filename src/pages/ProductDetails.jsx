@@ -1,10 +1,14 @@
-import React, { useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import RelatedProducts from '../components/RelatedProducts';
 import { CartContext } from '../context/CartContext';
 
 const ProductDetails = () => {
+  const location = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location]);
   const { addToCart } = useContext(CartContext)
   const { id } = useParams()
   // get product data base on the id

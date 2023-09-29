@@ -31,7 +31,6 @@ const SearchForm = () => {
     }
   }
 
-
   return <form
     onSubmit={handleSubmit}
     className={`${isAnimating ? 'animate-shake' : 'animate-none'} w-full relative`}>

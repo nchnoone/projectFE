@@ -11,7 +11,7 @@ const CategoryNav = () => {
       <div className='flex flex-col gap-y-6 p-6'>
         {data?.map((category) => {
           return (
-            <Link to={`/products/${category.id}`} className='cursor-pointer uppercase' key={category.id}>
+            <Link to={`/products/${category.id}`} className='cursor-pointer uppercase hover:text-accent duration-300' key={category.id}>
               {category.attributes.title}
             </Link>)
         })}

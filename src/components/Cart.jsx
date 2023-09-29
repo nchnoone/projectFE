@@ -17,7 +17,6 @@ const Cart = () => {
       const res = await request.post('/orders', {
         cart,
       })
-
       await stripe.redirectToCheckout({
         sessionId: res.data.stripeSession.id,
       })
@@ -40,6 +39,7 @@ const Cart = () => {
         })}
       </div>
     </div>
+
     {/* subtotal & total */}
     {cart.length >= 1 &&
       <div className='px-6 py-10 flex flex-col'>
@@ -54,6 +54,7 @@ const Cart = () => {
           <div>${total}</div>
         </div>
       </div>}
+
     {/* buttons */}
     <div>
       {cart.length >= 1
@@ -73,7 +74,6 @@ const Cart = () => {
           </div>
         </div>
       }
-
     </div>
   </div>
 };

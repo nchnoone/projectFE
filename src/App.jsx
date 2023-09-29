@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import Search from './pages/Search';
 import ProductDetails from './pages/ProductDetails';
+import { ToastContainer } from 'react-toastify';
 
 
 const Layout = () => {
@@ -36,6 +37,7 @@ const App = () => {
   return (
     <div>
       <RouterProvider router={router} />
+      <ToastContainer />
     </div>
   );
 };
