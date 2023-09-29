@@ -46,11 +46,19 @@ const Header = () => {
             <div className='bg-accent text-primary rounded-full flex items-center justify-center absolute top-3 -right-1 w-[18px] h-[18px] text-[13px] font-bold tracking-[-0.1em]'>{itemsAmount}</div>
           </div>
           {/* cart */}
-          <div className={`
+          {/* <div className={`
           ${isOpen ? 'right-0' : '-right-full'}
           bg-[#0e0f10] shadow-xl fixed top-0 bottom-0 w-full z-10 md:max-w-[500px] transition-all duration-300`}
           >
             <Cart />
+          </div> */}
+          <div className={`
+          ${isOpen ? 'right-0' : '-right-full'} shadow-xl flex fixed top-0 bottom-0 w-full z-10 transition-all duration-300`}
+          >
+            <div onClick={() => setIsOpen(!isOpen)} className='flex-1 bg-white/5'></div>
+            <div className='bg-[#0e0f10] md:max-w-[500px] h-full relative z-10'>
+              <Cart />
+            </div>
           </div>
         </div>
       </div>

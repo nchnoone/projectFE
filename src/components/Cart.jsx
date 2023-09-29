@@ -24,8 +24,8 @@ const Cart = () => {
       console.log(error);
     }
   }
-
-  return <div className='w-full h-full px-4'>
+  // <div className='w-full h-full px-4'>
+  return <div className='min-w-[500px] h-full px-4'>
     {/* close icon */}
     <div className='overflow-y-auto overflow-x-hidden h-[75vh]'>
       <div
